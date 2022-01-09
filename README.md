@@ -1,16 +1,18 @@
+# Create VPC, S3, LAMDA and RDS instance with AWS CDK Python
 
-# Welcome to your CDK Python project!
+This is a project to create a new VPC, S3, LAMDA and RDS instance on AWS with the AWS Cloud Development Kit.
 
-This is a blank project for Python development with CDK.
+This project also demonstrates:
+* Create S3 bucket(Please change the name for your usage)
+* Create VPC two PUBLIC subnets: PUBLIC
+* Create RDS instance (MySQL multi-AZ Free tier)
+* Create security group and allow access.
+* Create the Lamda function(Python) with s3 tigger
+    - Whenever csv file is uploaded in the respecitive s3 file will be parsed and data will be pushed to RDS
+* Granting the access to RDS from lamda function
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
-directory.  To create the virtualenv it assumes that there is a `python3`
-(or `python` for Windows) executable in your path with access to the `venv`
-package. If for any reason the automatic creation of the virtualenv fails,
-you can create the virtualenv manually.
+# Steps to deploy the Stack
 
 To manually create a virtualenv on MacOS and Linux:
 
